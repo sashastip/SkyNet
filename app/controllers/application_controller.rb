@@ -5,7 +5,9 @@ class ApplicationController < ActionController::Base
 
   before_filter :configure_devise_params, if: :devise_controller?
 
-  devise_parameter_sanitizer.for(:sign_up) do |u|
-    u.permit(:username, :avatar, :email, :password, :password_confirmation)
+  def configure_devise_params
+    devise_parameter_sanitizer.for(:sign_up) do |u|
+      u.permit(:username, :avatar, :email, :password, :password_confirmation)
+    end
   end
 end
