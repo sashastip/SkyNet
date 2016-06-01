@@ -4,10 +4,6 @@ Rails.application.routes.draw do
     get 'dashboard/index'
   end
 
-  namespace :admin do 
-    gem '', to: 'dashboard#index', as: '/'
-  end
-  
   mount ActionCable.server => '/cable'
   
   get 'rooms/show'
