@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   namespace :admin do
-    resources :dashboard
+    get '', to: 'dashboard#index', as: '/'
   end
 
   mount ActionCable.server => '/cable'
