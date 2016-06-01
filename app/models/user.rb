@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  rolify
   has_and_belongs_to_many :friends
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
