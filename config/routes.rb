@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :communities
   namespace :admin do
     get '', to: 'dashboard#index', as: '/'
   end
